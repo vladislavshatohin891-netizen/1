@@ -208,12 +208,12 @@ const SERVICES = [
 ];
 
 const PROJECTS = [
-  { cat:"Корпоратив", title:"Kyiv Invest Forum 2024", year:"2024 — Kyiv Arena", cls:"pg1" },
-  { cat:"Концерт", title:"Open Air Dnipro", year:"2024 — Набережна", cls:"pg2" },
-  { cat:"Конференція", title:"IT-Ukraine Summit", year:"2023 — Жовтневий палац", cls:"pg3" },
-  { cat:"Новорічне шоу", title:"Gala Night 2024", year:"2024 — Expo Plaza", cls:"pg4" },
-  { cat:"Презентація", title:"Auto Brand Launch UA", year:"2023 — Parkovy EC", cls:"pg5" },
-  { cat:"Фестиваль", title:"Sound Fest Ukraine", year:"2023 — Open Air", cls:"pg6" },
+  { cat:"Світловий дизайн", title:"Сценічне освітлення", year:"2024", img:"p1.jpg" },
+  { cat:"LED екран", title:"Конференц-зал", year:"2024", img:"p2.jpg" },
+  { cat:"LED стіна", title:"Святкова подія", year:"2024", img:"p3.jpg" },
+  { cat:"Концерт", title:"Moving heads шоу", year:"2024", img:"p4.jpg" },
+  { cat:"Концерт", title:"Live виступ", year:"2024", img:"p5.jpg" },
+  { cat:"Захід", title:"Event виробництво", year:"2024", img:"p1.jpg" },
 ];
 
 const STEPS = [
@@ -373,8 +373,7 @@ function App() {
           <div className="proj-grid">
             {PROJECTS.map((p,i) => (
               <div className="pcard fu" style={{transitionDelay:i*.09+"s"}} key={i}>
-                <div className={"pbg "+p.cls}/>
-                <div className="pover">
+<div className="pbg" style={{backgroundImage:"url('"+p.img+"')",backgroundSize:"cover",backgroundPosition:"center"}}/>                <div className="pover">
                   <div>
                     <div className="pcat">{p.cat}</div>
                     <div className="ptitle">{p.title}</div>
